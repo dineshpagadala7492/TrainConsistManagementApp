@@ -3,19 +3,14 @@ import java.util.*;
 public class TrainConsistManagementApp {
     public static void main(String[] args) {
 
-        LinkedList<String> train = new LinkedList<>();
+        Set<String> formation = new LinkedHashSet<>();
 
-        train.add("Engine");
-        train.add("Sleeper");
-        train.add("AC");
-        train.add("Cargo");
-        train.add("Guard");
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+        formation.add("Sleeper"); // duplicate
 
-        train.add(2, "Pantry");
-
-        train.removeFirst();
-        train.removeLast();
-
-        System.out.println("Final Train Consist: " + train);
+        System.out.println("Train Formation: " + formation);
     }
 }
